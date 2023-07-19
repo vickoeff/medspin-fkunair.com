@@ -27,7 +27,14 @@
 
 /*Colors*/
 :root {
-  --primary-color: #ffaa68;
+  --primary-color: #ffff;
+  --secondary-color: #cacded;
+  --tertiary-color: #5c6896;
+  --quaternay-color: #1c2f43;
+  --quinary-color: #fcb3c8;
+  --senary-color: #aadee2;
+  --septenary-color: #6accd9;
+  --octonary-color: #214f55;
 }
 
 /*Global*/
