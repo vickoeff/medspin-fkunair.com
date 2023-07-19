@@ -1,0 +1,10 @@
+variables:
+  SIBITI_CI_PROJECT_NAME: ${CI_PROJECT_NAME}
+  SIBITI_CI_COMMIT_TAG: ${CI_COMMIT_TAG}
+  SIBITI_CI_PROJECT_PATH: "/var/www/medspin-fkunair.com"
+  SIBITI_CI_PROJECT_PATH_STAGING: ""
+  SIBITI_CI_PROJECT_TYPE: html # laravel | nuxt | next | golang | html
+  SIBITI_CI_DEPLOY_TO: "landing-page-server-production"
+  SIBITI_CI_DEPLOY_TO_STAGING: ""
+trigger-downstream:
+  trigger: olimpiade/sibiti-pipeline

@@ -1,0 +1,632 @@
+/*Fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+
+@font-face {
+  font-family: "head-font";
+  src: url("./fonts/VICTORIABold.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "sub-head-font";
+  src: url("./fonts/GlacialIndifference-Regular.otf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "custom-head-font";
+  src: url("./fonts/Flamante-Round-Bold-FFP.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "body-font";
+  src: url("./fonts/Aleo-Regular.woff");
+  font-display: swap;
+}
+
+/*Colors*/
+:root {
+  --primary-color: #ffaa68;
+}
+
+/*Global*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "body-font", "sans-serif";
+}
+
+p {
+  color: #231916;
+}
+
+h1 {
+  font-family: "head-font", "sans-serif";
+  font-size: 48pt;
+}
+
+h2 {
+  font-family: "sub-head-font", "sans-serif";
+}
+
+section {
+  padding: 2.5rem 0;
+}
+
+.divider {
+  width: 50%;
+  margin: auto;
+  border-bottom: 3px solid #231916;
+}
+
+*::-webkit-scrollbar {
+  height: 10px;
+  width: 8px;
+}
+*::-webkit-scrollbar-track {
+  width: 6px;
+  background: #267236;
+}
+*::-webkit-scrollbar-thumb {
+  background: #39af52;
+  border-radius: 50px;
+}
+
+/*Preloader*/
+#preloader {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1031;
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  opacity: 1;
+  transition: 0.8s;
+  pointer-events: none;
+}
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid var(--primary-color);
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: var(--primary-color) transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/*Overlay*/
+.overlay {
+  z-index: 1030;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  overflow: hidden;
+  background-color: #ebfffe;
+  transition: 0.8s;
+}
+.overlay::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 300px;
+  height: 600px;
+  margin: auto;
+  background-image: url("./images/overlay-left.png");
+  background-size: 100% 100%;
+}
+.overlay::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 300px;
+  height: 600px;
+  margin: auto;
+  background-image: url("./images/overlay-right.png");
+  background-size: 100% 100%;
+}
+.overlay-text {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 10vh;
+  max-width: 20vw;
+  margin: auto;
+}
+.overlay-logo {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 46vh;
+  max-width: 20vw;
+  margin: auto;
+}
+.overlay .btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+  position: absolute;
+  bottom: 10vh;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 1031;
+}
+
+/* Back to Home */
+.back-to-home {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  background-color: white;
+  padding: 8px;
+  border-radius: 100%;
+  box-shadow: 0px 0px 4px #39af58;
+}
+.back-to-home img {
+  width: 32px;
+}
+
+/* Main Page */
+#main {
+  max-height: 100vh;
+  background-image: url("./images/main-bg.jpg");
+  background-position: top center;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  overflow-y: hidden;
+  scroll-behavior: smooth;
+}
+
+#about h1 {
+  font-family: "sans-serif";
+}
+
+.note {
+  background-image: url("./images/note-bg.png");
+  background-size: 100% 100%;
+  padding: 8rem 2rem 2rem 2rem;
+}
+
+.note {
+  text-align: justify;
+}
+
+.ornamen {
+  background-image: url("./images/ornamen\ hadiah\ lkti.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 2rem 2rem;
+  align-self: center;
+}
+
+.btn-smp {
+  font-weight: 600;
+  background-color: #24ef03;
+  border-radius: 30px;
+}
+.btn-smp:hover {
+  border: 1px solid #24ef03;
+}
+
+.btn-sma {
+  font-weight: 600;
+  background-color: #fa8336;
+  border-radius: 30px;
+}
+.btn-sma:hover {
+  border: 1px solid #fa8336;
+}
+
+.btn-sma-lkti {
+  font-weight: 600;
+  background-color: #3aaf5b;
+  border-radius: 30px;
+}
+.btn-sma-lkti:hover {
+  border: 1px solid #3aaf5b;
+}
+
+#timeline h1 {
+  font-size: 48pt;
+  transform: rotateZ(270deg);
+}
+
+#timeline ul {
+  list-style: none;
+}
+
+#timeline ul > li {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+#timeline ul > li::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  left: -2rem;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 100%;
+  background-color: #1a592c;
+}
+
+#timeline ul > li::after {
+  content: "";
+  position: absolute;
+  width: 4px;
+  height: calc(100% + 24px);
+  left: calc(-2rem + 6px);
+  bottom: calc(-50% - 24px);
+  margin: auto;
+  background-color: #1a592c;
+}
+
+#timeline ul > li:last-child::after {
+  content: none;
+}
+
+#timeline ul > li > p {
+  margin-bottom: 0;
+}
+
+#timeline ul > li > p:nth-child(1) {
+  font-weight: 600;
+  font-size: 24pt;
+}
+
+#timeline ul > li > p:nth-child(2) {
+  font-size: 16pt;
+  font-family: "sub-head-font", "sans-serif";
+  text-transform: uppercase;
+}
+
+#region {
+  margin-bottom: 4rem;
+}
+
+#region h2 {
+  letter-spacing: 4px;
+}
+
+#region p {
+  font-family: "";
+  font-weight: 600;
+  font-size: 16pt;
+  margin-top: 1rem;
+}
+
+#contact {
+  margin-top: 16rem;
+  padding-bottom: 4rem;
+}
+
+#contacts {
+  margin-top: 16rem;
+  padding-bottom: 20rem;
+}
+
+#contact .sosmed a {
+  display: flex;
+  font-size: 16pt;
+  font-weight: 600;
+  text-decoration: none;
+  color: #231916;
+  font-family: "arial", "sans-serif";
+  margin-bottom: 8px;
+}
+
+#contact .sosmed a:hover {
+  color: #fa8336;
+}
+
+#contact .sosmed a img {
+  width: 40px;
+  height: 40px;
+  margin-right: 1rem;
+}
+
+#copyright {
+  background-color: #f7f8f9;
+  color: #fa8336;
+  font-size: 15px;
+  text-align: center;
+  padding: 12px 0;
+}
+
+.media h1 {
+  font-size: 32pt;
+}
+
+.media a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: 600;
+  color: #231916;
+  font-size: 16pt;
+  text-decoration: none;
+}
+
+.media a .image {
+  min-height: 80px;
+}
+
+.media a img {
+  display: block;
+  width: 80px;
+  margin: auto;
+}
+
+/*Prize*/
+.prize-item {
+  font-weight: 600;
+  font-family: "arial", "sans-serif";
+}
+
+.prize-item img {
+  max-width: 150px;
+}
+
+.prize-title h2 {
+  letter-spacing: 10px;
+  font-weight: bolder;
+  font-size: 32pt;
+}
+
+/*Batch*/
+.batch {
+  padding: 10px 25px 10px;
+}
+
+.batch-title {
+  font-family: "arial", "sans-serif";
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.batch-body {
+  font-family: "arial", "sans-serif";
+  font-size: 22px;
+  margin: 0;
+}
+
+/*Common Style Sub Page*/
+#sma #head h1,
+#smp #head h1,
+#lkti #head h1 {
+  font-size: 64pt;
+  font-family: "custom-head-font", sans-serif;
+}
+#sma footer,
+#smp footer {
+  padding-top: 100vh;
+}
+#requirements h1 {
+  font-size: 32pt;
+  font-family: "custom-head-font", sans-serif;
+  letter-spacing: 8px;
+}
+#requirements ol > li {
+  font-size: 16pt;
+  font-weight: bold;
+  font-family: "arial", sans-serif;
+  text-align: justify;
+}
+
+.btn-download {
+  position: relative;
+  padding: 0;
+  padding-left: 4rem;
+  font-size: 24pt;
+  background-color: #fcf4d7;
+  border-radius: 40px;
+  border: 4px solid #7f664f;
+  box-shadow: 4px 4px 0 #7f664f;
+  transition: 0.5s;
+}
+.btn-download:hover {
+  color: white;
+  background-color: #7f664f;
+  transform: translateX(4px);
+  transform: translateY(4px);
+  box-shadow: unset;
+}
+.btn-download .right-icon {
+  display: inline-block;
+  padding: 4px 16px;
+  margin-left: 2rem;
+  background-color: #ccd5ae;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 30px;
+  float: right;
+}
+
+.btn-download .right-icon img {
+  position: relative;
+  width: 24px;
+  bottom: 4px;
+}
+
+.cp {
+  width: fit-content;
+  font-size: 2em;
+  font-weight: 600;
+  font-family: "head-font";
+  color: black;
+  text-decoration: none;
+  padding: 4px 4rem;
+  border-radius: 30px;
+  background-color: var(--primary-color);
+}
+
+.cp:hover {
+  color: white;
+}
+
+/* SMA */
+#sma {
+  background-image: url("./images/sma-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+#sma #head .title {
+  color: #5d66b6;
+}
+.body-color {
+  color: white;
+}
+
+/*SMP*/
+#smp {
+  background-image: url("./images/smp-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+#smp #head h1 {
+  color: #4e7d2d;
+}
+
+#smp .prize-title h2 {
+  color: #231916;
+}
+
+/*LKTI*/
+#lkti {
+  background-image: url("./images/lkti-bg.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: top;
+}
+#lkti #head h1 {
+  color: red;
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 24pt;
+  }
+
+  .back-to-home {
+    top: 1rem;
+    right: 1rem;
+    bottom: unset;
+  }
+
+  .overlay-text {
+    top: 10vh;
+    max-width: 45vw;
+  }
+  .overlay-logo {
+    top: 35vh;
+    max-width: 35vw;
+  }
+  .overlay .btn {
+    bottom: 15vh;
+  }
+
+  .overlay::before {
+    top: unset;
+    bottom: 30vh;
+    width: 100px;
+    height: 200px;
+  }
+  .overlay::after {
+    top: unset;
+    bottom: 30vh;
+    width: 100px;
+    height: 200px;
+  }
+
+  #main #header {
+    margin-top: 2.5rem;
+  }
+
+  .note {
+    padding-top: 8.5rem;
+  }
+
+  #lkti,
+  #sma,
+  #smp,
+  #main {
+    background-size: cover;
+    background-position: -40vw;
+  }
+
+  #contact .sosmed a {
+    font-size: 12pt;
+  }
+
+  #contact .sosmed a img {
+    width: 32px;
+    height: 32px;
+    margin-right: 1rem;
+  }
+
+  .btn-download {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  #smp footer,
+  #sma footer {
+    padding-top: 50vh;
+  }
+
+  .cp {
+    font-size: 12pt;
+    padding: 4px 1rem;
+  }
+
+  .media a {
+    font-size: 12pt;
+  }
+}
