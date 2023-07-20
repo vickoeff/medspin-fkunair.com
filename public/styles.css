@@ -3,25 +3,25 @@
 
 @font-face {
   font-family: "head-font";
-  src: url("./fonts/VICTORIABold.woff");
+  src: url("./fonts/FontsFree-Net-Dream-Avenue.ttf");
   font-display: swap;
 }
 
 @font-face {
   font-family: "sub-head-font";
-  src: url("./fonts/GlacialIndifference-Regular.otf");
+  src: url("./fonts/Garet-Heavy.woff");
   font-display: swap;
 }
 
-@font-face {
+/* @font-face {
   font-family: "custom-head-font";
   src: url("./fonts/Flamante-Round-Bold-FFP.woff");
   font-display: swap;
-}
+} */
 
 @font-face {
   font-family: "body-font";
-  src: url("./fonts/Aleo-Regular.woff");
+  src: url("./fonts/GlacialIndifference-Regular.otf");
   font-display: swap;
 }
 
@@ -56,16 +56,20 @@ p {
 
 h1 {
   font-family: "head-font", "sans-serif";
-  font-size: 48pt;
+  font-size: 200px;
+  font-weight: 400;
+  line-height: 200px;
+  /* margin-top: 224px;
+  margin-left: 493px; */
 }
 
 h2 {
   font-family: "sub-head-font", "sans-serif";
 }
 
-section {
+/* section {
   padding: 2.5rem 0;
-}
+} */
 
 .divider {
   width: 50%;
@@ -136,7 +140,49 @@ section {
   }
 }
 
-/*Overlay*/
+/* HEADER */
+#header {
+  background-image: url("./images/Artboard\ 1\ 1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  height: 100%;
+}
+
+.logo img {
+  width: 439px;
+  height: 439px;
+  margin-top: 178px;
+  margin-left: 44px;
+}
+
+#header h1 {
+  font-family: "head-font", "sans-serif";
+  font-size: 200px;
+  font-weight: 400;
+  color: white;
+  line-height: 200px;
+  height: 196px;
+  border: 1px;
+  /* box-shadow: 0px 0px 27px 0px rgba(255, 255, 255, 1), 0px 0px 54px 0px rgba(255, 255, 255, 1), 0px 0px 189px 0px rgba(255, 255, 255, 1), 0px 0px 378px 0px rgba(255, 255, 255, 1), 0px 0px 6485px 0px rgba(255, 255, 255, 1), 0px 0px 1134px 0px rgba(255, 255, 255, 1); */
+}
+
+.title {
+  margin-top: 224px;
+  margin-left: 483px;
+  width: 843px;
+}
+
+.title .caption {
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 31px;
+  color: white;
+  text-shadow: 0px 0px 30.347999572753906px 0px rgba(255, 255, 255, 1);
+}
+
+/* Overlay
 .overlay {
   z-index: 1030;
   width: 100vw;
@@ -198,7 +244,7 @@ section {
   right: 0;
   cursor: pointer;
   z-index: 1031;
-}
+} */
 
 /* Back to Home */
 .back-to-home {
@@ -247,23 +293,29 @@ section {
   align-self: center;
 }
 
-.btn-smp {
-  font-weight: 600;
-  background-color: #24ef03;
-  border-radius: 30px;
+.btn {
+  font-family: "sub-head-font", "sans-serif";
+  font-weight: 850;
+  font-size: 26px;
+  line-height: 37.7px;
+  text-align: center;
+  color: #5c6896;
+  border-radius: 60px;
+  box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to right, #aadee2, #cacded, #fcb3c8, #ffffff);
 }
-.btn-smp:hover {
+/* .btn-competition:hover {
   border: 1px solid #24ef03;
-}
+} */
 
-.btn-sma {
+/* .btn-openhouse {
   font-weight: 600;
   background-color: #fa8336;
   border-radius: 30px;
 }
-.btn-sma:hover {
+.btn-openhouse:hover {
   border: 1px solid #fa8336;
-}
+} */
 
 .btn-sma-lkti {
   font-weight: 600;
@@ -556,7 +608,7 @@ section {
   color: red;
 }
 
-@media (max-width: 450px) {
+/* @media (max-width: 450px) {
   h1 {
     font-size: 24pt;
   }
@@ -636,4 +688,4 @@ section {
   .media a {
     font-size: 12pt;
   }
-}
+} */
