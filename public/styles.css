@@ -56,7 +56,7 @@ p {
 
 h1 {
   font-family: "head-font", "sans-serif";
-  font-size: 200px;
+  font-size: 42pt;
   font-weight: 400;
   line-height: 200px;
   /* margin-top: 224px;
@@ -140,26 +140,52 @@ h2 {
   }
 }
 
+/* Global */
+.bright {
+  position: relative;
+  height: fit-content;
+}
+.bright h1 {
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+.bright h1:first-child {
+  display: inline-block;
+  position: relative;
+}
+.bright h1 {
+  text-shadow: 0px 0px 20px #ffffffad;
+}
+.bright h1:nth-child(1) {
+  text-shadow: 0px -10px 20px #ffffffad;
+}
+.bright h1:nth-child(2) {
+  text-shadow: 0px -5px 20px #ffffffad;
+}
+.bright h1:nth-child(3) {
+  text-shadow: 0px 0px 20px #ffffffad;
+}
+.bright h1:nth-child(4) {
+  text-shadow: 0px 5px 20px #ffffff;
+}
+
 /* HEADER */
 #header {
-  background-image: url("./images/Artboard\ 1\ 1.png");
+  background-image: url("./images/banner-bg.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
-  height: 100%;
 }
 
-.logo img {
-  width: 439px;
-  height: 439px;
-  margin-top: 178px;
-  margin-left: 44px;
+.head-box {
+  height: 100vh;
 }
 
 #header h1 {
   font-family: "head-font", "sans-serif";
-  font-size: 200px;
+  font-size: 100pt;
   font-weight: 400;
   color: white;
   line-height: 200px;
@@ -168,18 +194,17 @@ h2 {
   /* box-shadow: 0px 0px 27px 0px rgba(255, 255, 255, 1), 0px 0px 54px 0px rgba(255, 255, 255, 1), 0px 0px 189px 0px rgba(255, 255, 255, 1), 0px 0px 378px 0px rgba(255, 255, 255, 1), 0px 0px 6485px 0px rgba(255, 255, 255, 1), 0px 0px 1134px 0px rgba(255, 255, 255, 1); */
 }
 
-.title {
-  margin-top: 224px;
-  margin-left: 483px;
-  width: 843px;
-}
-
-.title .caption {
+#header .caption {
   font-weight: 400;
-  font-size: 26px;
+  font-size: 16pt;
   line-height: 31px;
   color: white;
   text-shadow: 0px 0px 30.347999572753906px 0px rgba(255, 255, 255, 1);
+  text-align: justify;
+}
+
+.btn-competition {
+  font-size: 16pt;
 }
 
 /* Overlay
@@ -294,9 +319,10 @@ h2 {
 }
 
 .btn {
+  width: 100%;
   font-family: "sub-head-font", "sans-serif";
   font-weight: 850;
-  font-size: 26px;
+  font-size: 12pt;
   line-height: 37.7px;
   text-align: center;
   color: #5c6896;

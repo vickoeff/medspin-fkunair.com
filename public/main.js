@@ -4,13 +4,24 @@ document.addEventListener("DOMContentLoaded", () => {
     preloader.style.opacity = 0;
 });
 
-const btnOpenOverlay = document.getElementById("slideUp");
-btnOpenOverlay.addEventListener("click", () => {
-    const overlay = document.getElementById("overlay");
-    const main = document.getElementById("main");
+// Bright Style
+document.body.onload = brightEl;
 
-    overlay.style.transform = "translateY(-100vh)";
-    main.style.maxHeight = "unset";
-    main.style.overflowY = "auto";
-    setTimeout(() => overlay.style.display = "none", 800);
-})
+function brightEl() {
+    const elBright = document.getElementsByClassName("bright");
+    const elBrightLength = elBright.length;
+    
+    for(let i = 0; i < elBrightLength; i++) {
+        const el = elBright[i];
+        const text = el.innerHTML;
+        el.innerHTML = "";
+        
+        for(let k = 0; k < 4; k++) {
+            const light = document.createElement("h1");
+            const innerText = document.createTextNode(text);
+            light.appendChild(innerText);
+
+            el.appendChild(light);
+        }
+    }
+}
