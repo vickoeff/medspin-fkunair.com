@@ -235,6 +235,7 @@ section {
 }
 .rainbow-card h2 {
   font-size: 24pt;
+  text-decoration: none;
 }
 .rainbow-card .content:before {
   content: "";
@@ -324,6 +325,10 @@ section {
   right: 0;
   margin: auto;
   text-align: center;
+}
+
+#participant ol > li {
+  color: white;
 }
 
 .list {
@@ -656,6 +661,10 @@ section {
   text-align: center;
 }
 
+#registration a {
+  text-decoration: none;
+}
+
 /*Batch*/
 .batch {
   padding: 10px 25px 10px;
@@ -688,5 +697,149 @@ section {
   }
   #participant .bright {
     height: 180px;
+  }
+}
+
+@media (max-width: 450px) {
+  h1 {
+    font-size: 32pt;
+  }
+
+  #header {
+    padding-bottom: 6rem;
+  }
+
+  #header .logo {
+    text-align: center;
+  }
+
+  #header .logo img {
+    max-width: 75%;
+    margin: auto;
+  }
+
+  #header h1 {
+    height: fit-content;
+  }
+
+  #header .bright *:first-child {
+    position: absolute;
+    display: inline-block;
+  }
+  #header .bright * {
+    right: 0;
+    margin: auto;
+    text-align: center;
+  }
+
+  #header .title.bright {
+    height: 164px;
+  }
+
+  #header .caption.bright {
+    font-size: 12pt;
+    height: 160px;
+  }
+
+  #header .bright h1 {
+    font-size: 64pt;
+  }
+
+  .over-bg {
+    top: -5rem !important;
+  }
+
+  #participant {
+    height: fit-content;
+  }
+
+  section.detail {
+    height: fit-content;
+  }
+
+  #participant .bright {
+    height: 96px;
+  }
+  .btn-competition,
+  .btn-openhouse {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .bright h1 {
+    font-size: 32pt;
+  }
+
+  .detail h1 {
+    font-size: 32pt;
+  }
+
+  .detail .bright {
+    height: fit-content;
+    margin-top: 1rem;
+  }
+
+  #prize h2 {
+    font-size: 16pt;
+  }
+
+  #registration {
+    height: fit-content;
+  }
+
+  .prize-pool .list > li {
+    font-size: 12pt;
+  }
+
+  .rainbow-card {
+    margin: auto;
+  }
+
+  .rainbow-card .content {
+    max-height: fit-content;
+  }
+
+  .rainbow-card h2 {
+    font-size: 12pt;
+  }
+
+  .btn-instagram,
+  .btn-register,
+  .btn-guideline {
+    width: 100%;
+  }
+
+  #copyright {
+    text-align: center;
+  }
+}
+
+@media (max-width: 376px) {
+  #header {
+    padding: unset;
+  }
+
+  #header .logo img {
+    max-width: 50%;
+    margin: auto;
+  }
+
+  #header .bright h1 {
+    height: 120px;
+    font-size: 48pt;
+  }
+
+  #header .title.bright {
+    height: 120px;
+    margin-top: -40px;
+  }
+
+  #header .caption.bright {
+    font-size: 10pt;
+  }
+
+  .btn-competition,
+  .btn-openhouse {
+    font-size: 10pt;
   }
 }
